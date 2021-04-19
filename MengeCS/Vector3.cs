@@ -80,6 +80,12 @@ namespace MengeCS
             set { _z = value; }
         }
 
+        public override string ToString()
+        {
+            string s = string.Format("{0} {1} {2} {3}", _x, _y, _z, Length());
+            return s;
+        }
+
         private float _x;
         private float _y;
         private float _z;

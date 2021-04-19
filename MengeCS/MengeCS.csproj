@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <MengeDir>E:\work\projects\menge_fork\projects\VS2015\Menge\build\lib\x64</MengeDir>
+    <MengeDir>D:\visual-studio-projects\Menge\projects\VS2017\Menge\build\lib\x64</MengeDir>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -51,13 +51,11 @@
     <Compile Include="Vector3.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MengeCore.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="MengeCore_d.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>xcopy /y /d "$(MengeDir)\MengeCore.dll" $(ProjectDir)</PreBuildEvent>
+    <PreBuildEvent>xcopy /y /d "$(MengeDir)\MengeCore_d.dll" $(ProjectDir)</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

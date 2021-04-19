@@ -48,6 +48,15 @@ namespace MengeCS
             _y = y;
         }
 
+        /// <summary>
+        /// Reports the magnitude of the vector.
+        /// </summary>
+        /// <returns>The vector's magnitude.</returns>
+        public float Length()
+        {
+            return (float)Math.Sqrt(_x * _x + _y * _y);
+        }
+
         public float X
         {
             get { return _x; }
@@ -58,6 +67,12 @@ namespace MengeCS
         {
             get { return _y; }
             set { _y = value; }
+        }
+
+        public override string ToString()
+        {
+            string s = string.Format("{0} {1} {2}", _x, _y, Length());
+            return s;
         }
 
         private float _x;
